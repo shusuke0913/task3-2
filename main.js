@@ -26,6 +26,10 @@
         removeBtn.textContent = '削除';
         tdRemoveBtn.appendChild(removeBtn);
         tr.appendChild(tdRemoveBtn);
+        removeBtn.addEventListener('click', () => {
+          todos.splice(index, 1);
+          showTodo();
+          });
         todoBody.appendChild(tr);
       });
     };
